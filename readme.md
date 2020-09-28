@@ -15,7 +15,7 @@ Weather is a weather app which allows a user to search by city and find out the 
 ## Screenshots
 Below is a screenshot
 
-<img src="./assets/images/kim-mulligan-weather/" alt="screenshot of weather app"/>
+<img src="./assets/images/kim-mulligan-weather.png" alt="screenshot of weather app"/>
 
 ## Contribution
 Made by Kim Mulligan
