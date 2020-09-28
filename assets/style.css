@@ -1,0 +1,23 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header{
+  text-align: center;
+  background-color: gray;
+}
+.rightSide{
+  border: blue 2px solid;
+}
+.leftSide{
+  border: green 2px solid;
+}
+#cardContainer{
+  display: flex;
+  padding: 40px;
+}
+.card{
+  margin-left: 10px;
+  margin-right: 10px;
+}
