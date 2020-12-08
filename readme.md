@@ -1,7 +1,7 @@
 # Weather
 
 ## Purpose
-Weather is a weather app which allows a user to search by city and find out the five day forcast including the UV index. Previous cities searched are saved in local storage and displayed.
+Weather is a weather app which allows a user to search by city and find out the five day forecast including the UV index. Previous cities searched are saved in local storage and displayed.
 
 ## Built With
 * HTML5
