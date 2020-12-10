@@ -21,3 +21,9 @@ header{
   margin-left: 10px;
   margin-right: 10px;
 }
+.button{
+  border-radius: 5px;
+}
+.jumbotron{
+  background-color: aqua;
+}

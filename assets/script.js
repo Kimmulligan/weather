@@ -13,9 +13,22 @@ function searchCity(cityString) {
       console.log(data);
       // data.list[0];
       buildJumbotron(data, cityString)
+      uvIndex(data.coord.lat, data.coord.lon)
       getForecast(cityString);
     });
 }
+function uvIndex(lat,lon){
+var uvUrl =
+"https://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon+"&appid=2c59ec07f638941e1e698a2dfc34b3f6&units=imperial";
+  fetch(uvUrl)
+  .then((response) => response.json())
+  .then((data)=>{
+    console.log(data);
+    var displayUv = `<button class="button">UV Index: ${data.value}</button>`;
+    jumbotron.append(displayUv)
+  })
+}
+
 var searchForm = $("#searchForm");
 searchForm.on("submit", function (event) {
   event.preventDefault();
@@ -43,16 +56,19 @@ function buildJumbotron(todaysWeather, cityName) {
     <h2>${cityName}</h2>
     <p>Temperature:${todaysWeather.main.temp}</p>
     <p>${todaysWeather.weather[0].description}</p>
-    <img src="http://openweathermap.org/img/wn/${todaysWeather.weather[0].icon}@2x.png" />`);
+    <img src="http://openweathermap.org/img/wn/${todaysWeather.weather[0].icon}@2x.png" />
+    <br>`);
 }
 function buildCards(list) {
   cardArea.innerHTML = ''
-  const forecastArray = list.slice(1,6);
+  const forecastArray = [list[4],list[12],list[20],list[28],list[36]];
   for (let index = 0; index <forecastArray.length; index++) {
     const element = forecastArray[index];
+    var d = new Date(element.dt_txt);
+    var n = d.toLocaleDateString();
     cardArea.innerHTML +=`<div class="card">
     <div class="card-body">
-      <h5 class="card-title">${element.dt}</h5>
+      <h5 class="card-title">${n}</h5>
       <p>${element.main.temp}
       <p class="card-text">${element.weather[0].description}</p>
       <img src="http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png" />
