@@ -53,7 +53,7 @@ cityList.empty()
 showHistory()
 function buildJumbotron(todaysWeather, cityName) {
   jumbotron.html(`
-    <h2>${cityName}</h2>
+    <h2>${cityName}<
     <p>Temperature:${todaysWeather.main.temp}</p>
     <p>${todaysWeather.weather[0].description}</p>
     <img src="http://openweathermap.org/img/wn/${todaysWeather.weather[0].icon}@2x.png" />
