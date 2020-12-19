@@ -53,7 +53,7 @@ cityList.empty()
 showHistory()
 function buildJumbotron(todaysWeather, cityName) {
   jumbotron.html(`
-    <h2>${cityName}<
+    <h2>${cityName}</h2>
     <p>Temperature:${todaysWeather.main.temp}</p>
     <p>${todaysWeather.weather[0].description}</p>
     <img src="http://openweathermap.org/img/wn/${todaysWeather.weather[0].icon}@2x.png" />
@@ -61,7 +61,7 @@ function buildJumbotron(todaysWeather, cityName) {
 }
 function buildCards(list) {
   cardArea.innerHTML = ''
-  const forecastArray = [list[4],list[12],list[20],list[28],list[36]];
+  const forecastArray = [list[4],list[12],list[20],list[28],list];
   for (let index = 0; index <forecastArray.length; index++) {
     const element = forecastArray[index];
     var d = new Date(element.dt_txt);
