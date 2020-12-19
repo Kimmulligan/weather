@@ -10,7 +10,7 @@ Weather is a weather app which allows a user to search by city and find out the 
 * jQuery
 
 ## Website
-[Click here to see deployed Weather Website!](https://kimmulligan.github.io/weather/ "Weather")
+[Click here to see deployed Weather Website!](https://kimmulligan.github.io/weather/)
 
 ## Screenshots
 Below is a screenshot
