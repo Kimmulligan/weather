@@ -4,7 +4,7 @@ var cardArea = document.getElementById("cardContainer");
 cityList.on("click", getCityName);
 console.log(jumbotron);
 var url =
-  "https:/api.openweathermap.org/data/2.5/weather?units=imperial&appid=2c59ec07f638941e1e698a2dfc34b3f6&q=";
+  "https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=2c59ec07f638941e1e698a2dfc34b3f6&q=";
 var citySearchBar = document.getElementById("citySearch");
 function searchCity(cityString) {
   fetch(url + cityString)
@@ -103,7 +103,7 @@ function getCityName(event) {
 const getForecast = (cityString) => {
   console.log(cityString);
   var url =
-    "https:/api.openweathermap.org/data/2.5/forecast?units=imperial&appid=2c59ec07f638941e1e698a2dfc34b3f6&q=";
+    "https://api.openweathermap.org/data/2.5/forecast?units=imperial&appid=2c59ec07f638941e1e698a2dfc34b3f6&q=";
   fetch(url + cityString)
     .then((response) => response.json())
     .then((data) => {
@@ -114,5 +114,5 @@ const getForecast = (cityString) => {
 //every 8th item in array
 // end of for loop i+=8
 
-if (dt_text.indexOf("15:00:00") !== -1) {
-}
+//if (dt_text.indexOf("15:00:00") !== -1) {
+//}
